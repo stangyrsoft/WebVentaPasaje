@@ -1,0 +1,29 @@
+﻿@using WebVentaPasaje.Models
+@model List<MarcaModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Marca</h2>
+
+<table class="table table-bordered">
+    <thead>
+        @* tr es fila y td columna  *@
+        <tr>
+            <td width="10%">Código</td>
+            <td width="15%">Nombre</td>
+            <td width="75%">Descripción</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Nombre</td>
+            <td>@item.Descripcion</td>
+        </tr>
+        }
+    </tbody>
+</table>
+
